@@ -1,10 +1,9 @@
 // Mọi nội dung cá nhân nằm ở đây. Chuỗi song ngữ dùng { en, vi }.
 // TODO(placeholder): những giá trị đánh dấu TODO cần thay bằng thông tin thật.
 import {
-  siAstro, siClerk, siCloudflareworkers, siCss, siDart, siDrizzle, siExpo, siExpress, siFirebase,
-  siFlutter, siGit, siGithubactions, siGooglegemini, siGsap, siHtml5, siJavascript, siNeon,
-  siNextdotjs, siNodedotjs, siPostgresql, siPython, siReact, siShadcnui, siStripe, siSupabase,
-  siTailwindcss, siTypescript, siVercel,
+  siAstro, siCloudflareworkers, siCss, siDart, siExpress, siFirebase, siFlutter, siGit,
+  siGithubactions, siGsap, siHtml5, siJavascript, siN8n, siNextdotjs, siNodedotjs, siOllama,
+  siPostgresql, siPython, siReact, siSupabase, siTailwindcss, siTypescript, siVercel,
 } from 'simple-icons'
 
 export type L = { en: string; vi: string }
@@ -42,7 +41,7 @@ export const greetings: L[] = [
 
 export const stats = [
   { value: '8', label: { en: 'Public repos', vi: 'Repo công khai' }, icon: 'folder' },
-  { value: '30+', label: { en: 'Technologies', vi: 'Công nghệ' }, icon: 'cpu' },
+  { value: '25+', label: { en: 'Technologies', vi: 'Công nghệ' }, icon: 'cpu' },
   { value: '3', label: { en: 'Web · Mobile · Cloud', vi: 'Web · Mobile · Cloud' }, icon: 'layers' },
 ] as const
 
@@ -59,8 +58,8 @@ export const about: AboutTab[] = [
     file: 'bio.md',
     title: { en: 'Hello, World.', vi: 'Hello, World.' },
     text: {
-      en: "I'm Đào Ngọc Thịnh (Tun), a fullstack developer who enjoys turning ideas into real products — from clean React interfaces to serverless backends on AWS and cross-platform mobile apps with Flutter and React Native.",
-      vi: 'Mình là Đào Ngọc Thịnh (Tun), lập trình viên fullstack thích biến ý tưởng thành sản phẩm thật — từ giao diện React gọn gàng, backend serverless trên AWS đến ứng dụng di động đa nền tảng với Flutter và React Native.',
+      en: "I'm Đào Ngọc Thịnh (Tun), a fullstack developer who enjoys turning ideas into real products — from clean React interfaces to serverless backends on AWS and cross-platform mobile apps with Flutter.",
+      vi: 'Mình là Đào Ngọc Thịnh (Tun), lập trình viên fullstack thích biến ý tưởng thành sản phẩm thật — từ giao diện React gọn gàng, backend serverless trên AWS đến ứng dụng di động đa nền tảng với Flutter.',
     },
     rows: [
       { k: { en: 'Name', vi: 'Họ tên' }, v: { en: 'Dao Ngoc Thinh', vi: 'Đào Ngọc Thịnh' } },
@@ -176,7 +175,7 @@ export const services: Service[] = [
     details: [
       { en: 'Express on Lambda + API Gateway, IaC with AWS SAM', vi: 'Express trên Lambda + API Gateway, hạ tầng bằng AWS SAM' },
       { en: 'Cognito, SES, EventBridge, CloudWatch + SNS alarms', vi: 'Cognito, SES, EventBridge, cảnh báo CloudWatch + SNS' },
-      { en: 'ZaloPay, MoMo & Stripe payments', vi: 'Thanh toán ZaloPay, MoMo & Stripe' },
+      { en: 'ZaloPay payments, refunds & expiry jobs', vi: 'Thanh toán, hoàn tiền & tự huỷ đơn ZaloPay' },
     ],
     link: `${GITHUB}/ecommerce-aws`,
   },
@@ -185,13 +184,13 @@ export const services: Service[] = [
     tag: { en: 'Cross-platform', vi: 'Đa nền tảng' },
     title: { en: 'Mobile Apps', vi: 'Ứng dụng Mobile' },
     text: {
-      en: 'Cross-platform apps with Flutter and React Native (Expo) — one codebase for Android, iOS and web.',
-      vi: 'Ứng dụng đa nền tảng với Flutter và React Native (Expo) — một codebase cho Android, iOS và web.',
+      en: 'Cross-platform apps with Flutter — one codebase for Android, iOS and web, backed by Firebase.',
+      vi: 'Ứng dụng đa nền tảng với Flutter — một codebase cho Android, iOS và web, dùng Firebase.',
     },
     details: [
       { en: 'Flutter + Firebase (Auth, Firestore, Hosting)', vi: 'Flutter + Firebase (Auth, Firestore, Hosting)' },
       { en: 'Role-based flows: patient, doctor, pharmacy', vi: 'Luồng theo vai trò: bệnh nhân, bác sĩ, nhà thuốc' },
-      { en: 'React Native + Expo: maps, rides, Stripe payments', vi: 'React Native + Expo: bản đồ, đặt xe, thanh toán Stripe' },
+      { en: 'Bilingual EN/VI, dark mode, live web build', vi: 'Song ngữ Anh/Việt, dark mode, có bản web chạy thật' },
     ],
     link: 'https://doctor-app-df8ca.web.app',
   },
@@ -200,13 +199,13 @@ export const services: Service[] = [
     tag: { en: 'AI Integration', vi: 'Tích hợp AI' },
     title: { en: 'AI Features', vi: 'Tính năng AI' },
     text: {
-      en: 'Practical AI inside products: content generation and assistants powered by Google Gemini.',
-      vi: 'AI thực dụng trong sản phẩm: sinh nội dung và trợ lý ảo dùng Google Gemini.',
+      en: 'Practical AI inside products: a self-hosted LLM assistant with Ollama, orchestrated by n8n.',
+      vi: 'AI thực dụng trong sản phẩm: trợ lý LLM tự host bằng Ollama, điều phối qua n8n.',
     },
     details: [
-      { en: 'Generate course outlines & lessons with Gemini', vi: 'Sinh dàn ý và bài học bằng Gemini' },
-      { en: 'Health Q&A assistant in DoctorApp', vi: 'Trợ lý hỏi đáp sức khoẻ trong DoctorApp' },
-      { en: 'Prompt design with structured JSON output', vi: 'Thiết kế prompt trả về JSON có cấu trúc' },
+      { en: 'Health & medicine Q&A assistant in DoctorApp', vi: 'Trợ lý hỏi đáp sức khoẻ & thuốc trong DoctorApp' },
+      { en: 'n8n webhook: Firebase token check, 20 questions/hour limit', vi: 'Webhook n8n: xác minh token Firebase, giới hạn 20 câu/giờ' },
+      { en: 'Drug-aware answers grounded in the catalog', vi: 'Trả lời theo dữ liệu thuốc trong danh mục' },
     ],
     link: `${GITHUB}/Flutter-doctor-app-master`,
   },
@@ -218,27 +217,27 @@ const s = (name: string, icon: Icon, abbr?: string): Skill => ({ name, icon, abb
 export const skills: { cat: L; items: Skill[] }[] = [
   {
     cat: { en: 'Frontend', vi: 'Frontend' },
-    items: [s('React', siReact), s('Next.js', siNextdotjs), s('Astro', siAstro), s('Tailwind', siTailwindcss), s('shadcn/ui', siShadcnui), s('GSAP', siGsap), s('HTML5', siHtml5), s('CSS3', siCss)],
+    items: [s('React', siReact), s('Next.js', siNextdotjs), s('Astro', siAstro), s('Tailwind', siTailwindcss), s('GSAP', siGsap), s('HTML5', siHtml5), s('CSS3', siCss)],
   },
   {
     cat: { en: 'Backend', vi: 'Backend' },
-    items: [s('Node.js', siNodedotjs), s('Express', siExpress), s('AWS Lambda', null, 'λ'), s('DynamoDB', null, 'DDB'), s('PostgreSQL', siPostgresql), s('Supabase', siSupabase), s('Drizzle', siDrizzle)],
+    items: [s('Node.js', siNodedotjs), s('Express', siExpress), s('AWS Lambda', null, 'λ'), s('DynamoDB', null, 'DDB'), s('PostgreSQL', siPostgresql), s('Supabase', siSupabase)],
   },
   {
     cat: { en: 'Languages', vi: 'Ngôn ngữ' },
-    items: [s('TypeScript', siTypescript), s('JavaScript', siJavascript), s('Dart', siDart), s('Python', siPython)],
+    items: [s('TypeScript', siTypescript), s('JavaScript', siJavascript), s('Python', siPython)],
   },
   {
     cat: { en: 'Mobile', vi: 'Mobile' },
-    items: [s('Flutter', siFlutter), s('React Native', siReact), s('Expo', siExpo)],
+    items: [s('Flutter', siFlutter), s('Dart', siDart)],
   },
   {
     cat: { en: 'Cloud & DevOps', vi: 'Cloud & DevOps' },
-    items: [s('AWS', null, 'AWS'), s('Cloudflare Workers', siCloudflareworkers), s('Firebase', siFirebase), s('Vercel', siVercel), s('Neon', siNeon), s('GitHub Actions', siGithubactions), s('Git', siGit)],
+    items: [s('AWS', null, 'AWS'), s('Cloudflare Workers', siCloudflareworkers), s('Firebase', siFirebase), s('Vercel', siVercel), s('GitHub Actions', siGithubactions), s('Git', siGit)],
   },
   {
     cat: { en: 'Auth, Payments & AI', vi: 'Auth, Thanh toán & AI' },
-    items: [s('Clerk', siClerk), s('Cognito', null, 'COG'), s('Stripe', siStripe), s('ZaloPay', null, 'ZP'), s('MoMo', null, 'MM'), s('Gemini AI', siGooglegemini)],
+    items: [s('Cognito', null, 'COG'), s('ZaloPay', null, 'ZP'), s('Ollama', siOllama), s('n8n', siN8n)],
   },
 ]
 
