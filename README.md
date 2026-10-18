@@ -17,10 +17,8 @@ Toàn bộ nội dung cá nhân ở [src/config.ts](src/config.ts). Chữ giao d
 
 Cần thay (đánh dấu `TODO` trong config):
 
-- `avatar`: ảnh thật (đang dùng avatar GitHub)
-- `email`, `linkedin`: đang là giá trị mẫu
+- `linkedin`: rỗng → nút LinkedIn ẩn
 - `cv`: bỏ PDF vào `public/` rồi set `'/cv.pdf'` (đang rỗng → nút Download CV ẩn)
 - `socials` Facebook / Instagram / TikTok (rỗng → ẩn)
-- `copyright`, tab `education.md` và `location.md` (trường, thành phố)
-- Ảnh dự án AWS Shop và Japanese: thêm file vào `public/projects/`, set `image`
+- Ảnh dự án Japanese và Ride-hailing: thêm file vào `public/projects/`, set `image`
 - Japanese: thêm `demo` sau khi deploy Vercel

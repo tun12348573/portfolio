@@ -79,7 +79,9 @@ export function Hero() {
           <p className="connect mono"><MessageSquare size={12} /> {t(ui.connect)}</p>
           <div className="connect-btns">
             <a className="btn btn-ghost mono" href={`mailto:${profile.email}`}><Mail size={12} /> Email</a>
-            <a className="btn btn-ghost mono" href={profile.linkedin} target="_blank" rel="noreferrer"><LinkedinIcon size={12} /> LinkedIn</a>
+            {profile.linkedin && (
+              <a className="btn btn-ghost mono" href={profile.linkedin} target="_blank" rel="noreferrer"><LinkedinIcon size={12} /> LinkedIn</a>
+            )}
             <a className="btn btn-ghost mono" href={profile.github} target="_blank" rel="noreferrer"><Brand icon={siGithub} size={12} /> GitHub</a>
           </div>
         </Frame>
