@@ -11,6 +11,7 @@ export type L = { en: string; vi: string }
 type Icon = { path: string; hex: string } | null // null → hiện chữ viết tắt
 
 const GITHUB = 'https://github.com/tun12348573'
+const asset = (p: string) => import.meta.env.BASE_URL + p // file trong public/, tự thêm base path
 
 export const profile = {
   // Tên lớn ở hero, mỗi phần tử là 1 "miếng" chữ cắt dán; style a–f định nghĩa trong Hero.css
@@ -22,11 +23,11 @@ export const profile = {
     { ch: 'T', s: 'd' }, { ch: 'U', s: 'e' }, { ch: 'N', s: 'f' },
   ],
   logo: { top: 'TUN', bottom: 'DEV' },
-  avatar: '/avatar.jpg',
+  avatar: asset('avatar.jpg'),
   email: 'thinhdaongoc1@gmail.com',
   linkedin: '', // TODO: rỗng → ẩn
   github: GITHUB,
-  cv: '', // TODO: đường dẫn PDF, vd '/cv.pdf'. Rỗng → ẩn nút Download CV
+  cv: '', // TODO: đường dẫn PDF, vd asset('cv.pdf'). Rỗng → ẩn nút Download CV
   socials: {
     facebook: '', // TODO: rỗng → ẩn
     instagram: '',
@@ -110,7 +111,7 @@ export const projects: Project[] = [
     },
     stack: 'Next.js · Lambda · DynamoDB',
     repo: `${GITHUB}/ecommerce-aws`,
-    image: '/projects/aws-shop.jpg',
+    image: asset('projects/aws-shop.jpg'),
   },
   {
     name: { en: 'Trang Nam Thinh Architecture', vi: 'Kiến trúc Trang Nam Thịnh' },
@@ -121,7 +122,7 @@ export const projects: Project[] = [
     stack: 'Astro · Cloudflare · Supabase',
     repo: `${GITHUB}/Architecture-showroom-app`,
     demo: 'https://trang-nam-thinh-portfolio.trang-nam-thinh-portfolio.workers.dev',
-    image: '/projects/showroom.jpg',
+    image: asset('projects/showroom.jpg'),
   },
   {
     name: { en: 'DoctorApp', vi: 'DoctorApp' },
@@ -132,7 +133,7 @@ export const projects: Project[] = [
     stack: 'Flutter · Firebase',
     repo: `${GITHUB}/Flutter-doctor-app-master`,
     demo: 'https://doctor-app-df8ca.web.app',
-    image: '/projects/doctorapp.png',
+    image: asset('projects/doctorapp.png'),
   },
   {
     name: { en: 'Japanese Learning Platform', vi: 'Nền tảng học tiếng Nhật' },
@@ -161,7 +162,7 @@ export const projects: Project[] = [
     stack: 'Hugo · GitHub Pages',
     repo: `${GITHUB}/workshop-`,
     demo: 'https://tun12348573.github.io/workshop-/',
-    image: '/projects/aws-report.jpg',
+    image: asset('projects/aws-report.jpg'),
   },
 ]
 

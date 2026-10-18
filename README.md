@@ -1,4 +1,4 @@
-# Portfolio · tun12348573.github.io
+# Portfolio · tun12348573.github.io/portfolio
 
 Portfolio một trang, song ngữ VI/EN, theme sáng/tối. Vite + React + TypeScript, CSS thuần, `motion` cho hiệu ứng.
 
@@ -7,6 +7,8 @@ npm install
 npm run dev      # http://localhost:5173
 npm run build    # ra dist/
 ```
+
+Site: https://tun12348573.github.io/portfolio/ (`base` trong [vite.config.ts](vite.config.ts) phải khớp tên repo).
 
 Push lên `main` → GitHub Actions ([.github/workflows/deploy.yml](.github/workflows/deploy.yml)) build và deploy lên GitHub Pages.
 Lần đầu: repo Settings → Pages → Source = **GitHub Actions**.
