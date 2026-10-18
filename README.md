@@ -22,5 +22,5 @@ Cần thay (đánh dấu `TODO` trong config):
 - `linkedin`: rỗng → nút LinkedIn ẩn
 - `cv`: bỏ PDF vào `public/` rồi set `'/cv.pdf'` (đang rỗng → nút Download CV ẩn)
 - `socials` Facebook / Instagram / TikTok (rỗng → ẩn)
-- Ảnh dự án Japanese và Ride-hailing: thêm file vào `public/projects/`, set `image`
+- Ảnh dự án Japanese: thêm file vào `public/projects/`, set `image`
 - Japanese: thêm `demo` sau khi deploy Vercel

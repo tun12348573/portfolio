@@ -145,15 +145,6 @@ export const projects: Project[] = [
     repo: `${GITHUB}/Japanese-learning-platform`,
   },
   {
-    name: { en: 'Ride-hailing App', vi: 'Ứng dụng gọi xe' },
-    desc: {
-      en: 'Grab/Uber-style mobile app: find and book rides on Google Maps, pick a driver, pay with Stripe. Expo Router API routes on Neon Postgres, Clerk auth.',
-      vi: 'App gọi xe kiểu Grab/Uber: tìm và đặt chuyến trên Google Maps, chọn tài xế, thanh toán Stripe. API route Expo Router trên Neon Postgres, đăng nhập Clerk.',
-    },
-    stack: 'React Native · Expo · Stripe',
-    repo: `${GITHUB}/Grab-clone`,
-  },
-  {
     name: { en: 'AWS Internship Report', vi: 'Báo cáo thực tập AWS' },
     desc: {
       en: 'Bilingual Hugo site documenting my 12-week AWS First Cloud AI Journey: weekly worklogs, project proposal, blogs and events.',
